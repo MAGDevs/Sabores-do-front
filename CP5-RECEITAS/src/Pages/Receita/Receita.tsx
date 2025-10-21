@@ -5,16 +5,19 @@ import type { ReceitaTipos } from "../../Types/ReceitaTipos";
 const Receita = () => {
   const { id } = useParams();
   const [receita, setReceita] = useState<ReceitaTipos | null>(null);
+    
+  console.log("ID da URL:", id); 
   
   useEffect(() => {
-    fetch("/data/receitas.json")
-      .then((res) => res.json())
-      .then((data: ReceitaTipos[]) => {
-        const encontrado = data.find((p) => p.id === Number(id));
-        setReceita(encontrado || null);
-      })
-      .catch(() => setReceita(null));
-  }, [id]);
+  fetch("/data/receitas.json")
+    .then((res) => res.json())
+    .then((data: ReceitaTipos[]) => {
+      console.log("Todos os IDs disponíveis:", data.map(r => r.id));
+      const encontrado = data.find((p) => p.id.toString() === id);
+      setReceita(encontrado || null);
+    })
+    .catch(() => setReceita(null));
+}, [id]);
 
   if (!receita) {
     return (

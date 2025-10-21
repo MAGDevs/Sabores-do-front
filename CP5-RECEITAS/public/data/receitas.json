@@ -152,7 +152,7 @@
     {
         "id": 11,
         "categoria": "Pratos Principais",
-        "nome": "Bife à milanesa",
+        "nome": "Bife à milanez(a)",
         "ingredientes": [
             "4 bifes de carne",
             "2 ovos",
@@ -163,7 +163,7 @@
         ],
         "modoPreparo": "Tempere os bifes, passe na farinha, no ovo e na farinha de rosca. Frite em óleo quente até dourar dos dois lados." ,
         "tempo": "30 minutos",
-        "imagem": "imagens/bife_milanesa.jpg"
+        "imagem": "/imagens/bife_milanesa.jpg"
     },
     {
         "id": 12,

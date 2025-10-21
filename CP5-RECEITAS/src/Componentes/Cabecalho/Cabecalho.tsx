@@ -9,10 +9,10 @@ const Cabecalho = () => {
             Sabores do Front
           </Link>
           
-          {/* Menu */}
           <nav className="flex space-x-6">
             <Link to="/" className="hover:text-pink-700 transition">Home</Link>
             <Link to="/receitas" className="hover:text-pink-700 transition">Receitas</Link>
+            <Link to="/login" className="hover:text-pink-700 transition">Login</Link>
           </nav>
         </div>
       </div>
