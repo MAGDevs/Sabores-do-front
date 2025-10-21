@@ -8,7 +8,7 @@ function Footer() {
           <p className="font-medium">Mirelly Sousa Alves <span className="text-pink-600">RM: 566299</span></p>
         </div>
         <div className="mt-4 pt-4 border-t border-pink-200">
-          <p className="text-sm text-pink-600">© 2025- Sabores do Front - Todos os direitos reservados</p>
+          <p className="text-sm text-pink-600">EXPORT DEFAULT - TODOS DIREITOS RESERVADOS</p>
         </div>
       </div>
     </footer>
