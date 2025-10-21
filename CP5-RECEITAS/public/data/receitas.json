@@ -1,0 +1,266 @@
+[
+    {
+        "id": 1,
+        "categoria": "Entradas",
+        "nome": "Bruschetta",
+        "ingredientes": [
+            "1 baguete",
+            "2 tomates picados",
+            "1 dente de alho",
+            "Folhas de manjericão",
+            "Azeite a gosto"
+        ],
+        "modoPreparo": "Corte a baguete em fatias e toste levemente. Misture os tomates picados com alho picado, manjericão e azeite. Coloque sobre as fatias de pão e sirva.",
+        "tempo": "10 minutos",
+        "imagem": "/imagens/bruschetta.jpg"
+    },
+    {
+        "id": 2,
+        "categoria": "Entradas",
+        "nome": "Ceviche",
+        "ingredientes": [
+            "500g de peixe branco",
+            "1 cebola roxa",
+            "Suco de 4 limões",
+            "Coentro fresco",
+            "Sal e pimenta a gosto"
+        ],
+        "modoPreparo": "Corte o peixe em cubos pequenos, adicione o suco de limão e a cebola picada. Deixe marinar por 10 minutos e finalize com coentro, sal e pimenta.",
+        "tempo": "20 minutos",
+        "imagem": "/imagens/ceviche.jpg" 
+    },
+    {
+        "id": 3,
+        "categoria": "Entradas",
+        "nome": "Carpaccio",
+        "ingredientes": [
+            "200g de carne bovina",
+            "Azeite",
+            "Limão",
+            "Parmesão ralado",
+            "Rúcula"
+        ],
+        "modoPreparo": "Corte a carne em fatias finas, regue com azeite e limão. Decore com rúcula e parmesão. Sirva imediatamente.",
+        "tempo": "10 minutos",
+        "imagem": "/imagens/carpaccio.jpg"
+    },
+    {
+        "id": 4,
+        "categoria": "Entradas",
+        "nome": "Guacamole",
+        "ingredientes": [
+            "3 abacates",
+            "1 tomate picado",
+            "1 cebola roxa picada",
+            "Suco de 1 limão",
+            "Coentro fresco",
+            "Sal e pimenta a gosto"
+        ],
+        "modoPreparo": "Amasse o abacate e misture com os outros ingredientes. Ajuste o tempero e sirva com nachos.",
+        "tempo": "15 minutos",
+        "imagem": "/imagens/guacamole.jpg" 
+    },
+    {
+        "id": 5,
+        "categoria": "Entradas",
+        "nome": "Salada Caprese",
+        "ingredientes": [
+            "Tomates",
+            "Queijo mussarela de búfala",
+            "Folhas de manjericão",
+            "Azeite",
+            "Sal e pimenta"
+        ],
+        "modoPreparo": "Monte a salada alternando camadas de tomate, queijo e manjericão. Regue com azeite e tempere com sal e pimenta.",
+        "tempo": "10 minutos",
+        "imagem": "/imagens/salada_caprese.jpg"
+    },
+    {
+        "id": 6,
+        "categoria": "Entradas",
+        "nome": "Pastel de queijo",
+        "ingredientes": [
+            "Massa de pastel",
+            "Queijo mussarela",
+            "Óleo para fritar"
+        ],
+        "modoPreparo": "Recheie a massa com queijo e feche os pastéis. Frite até ficarem dourados e sirva.",
+        "tempo": "15 minutos",
+        "imagem": "/imagens/pastel_queijo.jpg"
+    },
+    {
+        "id": 7,
+        "categoria": "Pratos Principais",
+        "nome": "Feijoada",
+        "ingredientes": [
+            "500g de feijão preto",
+            "300g de carne seca",
+            "200g de linguiça",
+            "1 cebola'",
+            "Alho a gosto",
+            "Sal e pimenta"
+        ],
+        "modoPreparo": "Cozinhe o feijão com as carnes e adicione temperos. Cozinhe por cerca de 1 hora e sirva com arroz e farofa.",
+        "tempo": "2 horas",
+        "imagem": "/imagens/feijoada.jpg" 
+    },
+    {
+        "id": 8,
+        "categoria": "Pratos Principais",
+        "nome": "Frango ao curry",
+        "ingredientes": [
+            "500g de peito de frango",
+            "1 cebola'",
+            "2 dentes de alho",
+            "Curry em pó",
+            "Creme de leite"
+        ],
+        "modoPreparo": "Corte o frango e refogue com cebola e alho. Adicione o curry e o creme de leite, cozinhando por 20 minutos.",
+        "tempo": "30 minutos",
+        "imagem": "/imagens/frango_curry.jpg" 
+    },
+    {
+        "id": 9,
+        "categoria": "Pratos Principais",
+        "nome": "Spaghetti à Carbonara",
+        "ingredientes": [
+            "250g de espaguete",
+            "100g de bacon",
+            "2 ovos",
+            "Parmesão ralado",
+            "Sal e pimenta"
+        ],
+        "modoPreparo": "Cozinhe o espaguete e reserve. Frite o bacon e misture com os ovos e o parmesão. Junte ao espaguete e sirva.",
+        "tempo": "20 minutos",
+        "imagem": "/imagens/spaghetti_carbonara.jpg" 
+    },
+    {
+        "id": 10,
+        "categoria": "Pratos Principais",
+        "nome": "Lasanha de Carne",
+        "ingredientes": [
+            "500g de carne moída",
+            "1 pacote de massa de lasanha",
+            "1 cebola'",
+            "Molho de tomate",
+            "Queijo mussarela"
+        ],
+        "modoPreparo": "Refogue a carne com cebola, adicione o molho de tomate e cozinhe. Monte as camadas de lasanha, intercalando com carne e queijo, e asse por 30 minutos.",
+        "tempo":"1 hora" ,
+        "imagem": "/imagens/lasanha_carne.jpg"
+    },
+    {
+        "id": 11,
+        "categoria": "Pratos Principais",
+        "nome": "Bife à milanesa",
+        "ingredientes": [
+            "4 bifes de carne",
+            "2 ovos",
+            "Farinha de rosca",
+            "Farinha de trigo",
+            "Alho e sal",
+            "Óleo para fritar"
+        ],
+        "modoPreparo": "Tempere os bifes, passe na farinha, no ovo e na farinha de rosca. Frite em óleo quente até dourar dos dois lados." ,
+        "tempo": "30 minutos",
+        "imagem": "imagens/bife_milanesa.jpg"
+    },
+    {
+        "id": 12,
+        "categoria": "Pratos Principais",
+        "nome": "Pizza Margherita",
+        "ingredientes": [
+            "Massa de pizza",
+            "Molho de tomate",
+            "Queijo mussarela",
+            "Folhas de manjericão",
+            "Azeite"
+        ],
+        "modoPreparo": "Monte a pizza com o molho de tomate, queijo e manjericão. Leve ao forno até dourar e regue com azeite.",
+        "tempo": "20 minutos",
+        "imagem": "/imagens/pizza_margherita.jpg"
+    },
+    {
+        "id": 13,
+        "categoria": "Sobremesas",
+        "nome": "Brigadeiro",
+        "ingredientes": [
+            "1  lata de leite condensado",
+            "1 colher de manteiga",
+            "3 colheres de chocolate em pó"
+        ],
+        "modoPreparo": "Misture todos os ingredientes e leve ao fogo baixo, mexendo até soltar do fundo da panela.",
+        "tempo": "20 minutos",
+        "imagem": "/imagens/brigadeiro.jpg" 
+    },
+    {
+        "id": 14,
+        "categoria": "Sobremesas",
+        "nome": "Pavê de chocolate",
+        "ingredientes":[ 
+            "1 pacote de biscoito champagne",
+            "200g de chocolate meio amargo",
+            "1 lata de creme de leite",
+            "1  lata de leite condensado"
+        ],
+        "modoPreparo": "Derreta o chocolate e misture com o creme de leite e o leite condensado. Monte o pavê intercalando camadas de biscoito e creme.",
+        "tempo": "1 hora",
+        "imagem": "/imagens/pave_chocolate.jpg"
+    },
+    {
+        "id": 15,
+        "categoria": "Sobremesas",
+        "nome": "Torta de Limão",
+        "ingredientes": [
+            "1 pacote de biscoito maisena",
+            "100g de manteiga",
+            "1  lata de leite condensado",
+            "Suco de 2 limões"
+        ],
+        "modoPreparo": "Triture o biscoito e misture com a manteiga para formar a base. Bata o leite condensado com o suco de limão e coloque sobre a base.",
+        "tempo": "1 hora",
+        "imagem": "/imagens/torta_limao.jpg"
+    },
+    {
+        "id": 16,
+        "categoria": "Sobremesas",
+        "nome": "Mousse de Maracujá",
+        "ingredientes": [
+            "1  lata de leite condensado",
+            "1 lata de creme de leite",
+            "Suco de 2 maracujás"
+        ],
+        "modoPreparo": "Bata todos os ingredientes no liquidificador e leve à geladeira por 3 horas.",
+        "tempo": "3 horas",
+        "imagem": "/imagens/mousse_maracuja.jpg"
+    },
+    {
+        "id": 17,
+        "categoria": "Sobremesas",
+        "nome": "Gelatina Colorida",
+        "ingredientes": [
+            "3 pacotes de gelatina de diferentes sabores",
+            "1 lata de creme de leite"
+        ],
+        "modoPreparo": "Prepare a gelatina de acordo com as instruções da embalagem. Faça camadas alternadas de gelatina e creme de leite.",
+        "tempo": "4 horas",
+        "imagem": "/imagens/gelatina_colorida.jpg"
+    },
+    {
+        "id": 18,
+        "categoria": "Sobremesas",
+        "nome": "Bolo de Cenoura",
+        "ingredientes": [
+            "3 cenouras médias",
+            "3 ovos",
+            "1 xícara de óleo",
+            "2 xícaras de açúcar",
+            "2 xícaras de farinha de tirgo",
+            "1 colher de fermento de trigo"
+        ],
+        "modoPreparo": "Bata as cenouras, ovos e óleo no liquidificador. Misture com os ingredientes secos e asse por 40 minutos.",
+        "tempo": "1 hora",
+        "imagem": "/imagens/bolo_cenoura.jpg"
+    }
+
+]
