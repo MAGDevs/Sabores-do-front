@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const pratosEspeciais = [
-    { id: 1, nome: "bruschetta", descricao: "Clássico italiano com toque brasileiro", categoria: "starter" },
-    { id: 2, nome: "Bife à Milanesa", descricao: "Arroz cremoso com cogumelos selvagens", categoria: "main" },
+    { id: 1, nome: "Bife à Milanesa", descricao: "Clássico italiano com toque brasileiro", categoria: "starter" },
+    { id: 2, nome: "Risotto de Funghi", descricao: "Arroz cremoso com cogumelos selvagens", categoria: "main" },
     { id: 3, nome: "Tiramisù", descricao: "Sobremesa italiana tradicional", categoria: "sweet" },
     { id: 4, nome: "Bruschetta al Pomodoro", descricao: "Entrada fresca com tomate e manjericão", categoria: "starter" },
     { id: 5, nome: "pipipipopopo", descricao:"Sla oq sla oq lá", categoria: "main"},

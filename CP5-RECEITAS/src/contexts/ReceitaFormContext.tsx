@@ -1,20 +1,13 @@
 import React, { createContext, useContext, useState, type ReactNode } from 'react';
-import { 
-    useForm, 
-    type UseFormRegister, 
-    type UseFormHandleSubmit,
-    type UseFormWatch,
-    type UseFormSetValue, 
-    type FieldErrors
-} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import type { ReceitaFormData } from '../Types/ReceitaTipos';
 
 interface ReceitaFormContextType {
-  register: UseFormRegister<ReceitaFormData>;
-  handleSubmit: UseFormHandleSubmit<ReceitaFormData>;
-  errors: FieldErrors<ReceitaFormData>;
-  watch: UseFormWatch<ReceitaFormData>;
-  setValue: UseFormSetValue<ReceitaFormData>;
+  register: any;
+  handleSubmit: any;
+  errors: any;
+  watch: any;
+  setValue: any;
   receitas: ReceitaFormData[];
   adicionarReceita: (data: ReceitaFormData) => void;
   limparFormulario: () => void;
@@ -22,7 +15,7 @@ interface ReceitaFormContextType {
 
 const ReceitaFormContext = createContext<ReceitaFormContextType | undefined>(undefined);
 
-export const useReceitaForm = (): ReceitaFormContextType => {
+export const useReceitaForm = () => {
   const context = useContext(ReceitaFormContext);
   if (!context) {
     throw new Error('useReceitaForm deve ser usado dentro de ReceitaFormProvider');
@@ -44,16 +37,10 @@ export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ childr
     watch,
     setValue,
     reset
-  } = useForm<ReceitaFormData>({
-    defaultValues: {
-        ingredientes: [],
-        categoria: ''
+  } = useForm<ReceitaFormData>();
 
-    }
-  });
-
-  const adicionarReceita = (data: ReceitaFormData): void => {
-    const novaReceita: ReceitaFormData = {
+  const adicionarReceita = (data: ReceitaFormData) => {
+    const novaReceita = {
       ...data,
       id: Date.now()
     };
@@ -65,7 +52,7 @@ export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ childr
     reset();
   };
 
-  const value: ReceitaFormContextType = {
+  const value = {
     register,
     handleSubmit,
     errors,

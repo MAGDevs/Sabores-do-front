@@ -9,13 +9,10 @@ export interface ReceitaTipos {
 }
 
 export interface ReceitaFormData {
-  id?: number;
   nome: string;
   categoria: string;
   ingredientes: string[];
   modoPreparo: string;
   tempo: string;
-  imagem?: string;
+  imagem: string;
 }
-
-export type Categoria = 'entrada' | 'prato-principal' | 'sobremesa' | '';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useReceitaForm } from '../../contexts/ReceitaFormContext';
-import type { ReceitaFormData } from '../../Types/ReceitaTipos';
+
 
 const ReceitaForm: React.FC = () => {
   const {
@@ -17,7 +17,7 @@ const ReceitaForm: React.FC = () => {
   const adicionarIngrediente = () => {
     if (novoIngrediente.trim()) {
       const ingredientesAtuais = watch('ingredientes') || [];
-      setValue('ingredientes', [...ingredientesAtuais, novoIngrediente.trim()]);
+      setValue('ingredientes', [...ingredientesAtuais, novoIngrediente]);
       setNovoIngrediente('');
     }
   };
@@ -27,7 +27,7 @@ const ReceitaForm: React.FC = () => {
     setValue('ingredientes', ingredientesAtuais.filter((_, i) => i !== index));
   };
 
-  const onSubmit = (data: ReceitaFormData) => {
+  const onSubmit = (data: any) => {
     adicionarReceita(data);
     alert('Receita adicionada com sucesso!');
   };
@@ -63,14 +63,8 @@ const ReceitaForm: React.FC = () => {
         <label className="block text-pink-700 mb-2">Ingredientes</label>
         <div className="flex gap-2 mb-2">
           <input
-            value={novoIngrediente} 
+            value={novoIngrediente}
             onChange={(e) => setNovoIngrediente(e.target.value)}
-            onKeyPress={(e) => {
-              if (e.key === 'Enter') {
-                e.preventDefault();
-                adicionarIngrediente();
-              }
-            }}
             className="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
             placeholder="Adicionar ingrediente"
           />

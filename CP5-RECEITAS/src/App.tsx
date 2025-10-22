@@ -4,7 +4,7 @@ import Receita from "./Pages/Receita/Receita";
 import Login from "./Pages/Login/Login";
 import Cabecalho from "./Componentes/Cabecalho/Cabecalho";
 import Footer from "./Componentes/Footer/Footer";
-import ReceitaForm from "./Componentes/ReceitaForm/ReceitaForm"; 
+import ReceitaForm from "./Componentes/ReceitaForm/ReceitaForm";
 import ListaReceitas from "./Componentes/ListaReceitas/ListaReceitas";
 import Receitas from "./Pages/Receitas/Receitas";
 import Entradas from "./Pages/Entradas/Entradas";

@@ -20,12 +20,12 @@ const Receitas = () => {
     buscarReceita();
   }, []);
 
-  // Filtrar receitas por categoria se especificada
+
   const receitasFiltradas = categoria 
     ? receitas.filter(receita => 
-        (categoria === 'entradas' && receita.categoria === 'starter') ||
-        (categoria === 'pratos' && receita.categoria === 'main') ||
-        (categoria === 'sobremesas' && receita.categoria === 'sweet')
+        (categoria === 'entradas' && receita.categoria === 'Entradas') ||
+        (categoria === 'pratos' && receita.categoria === 'Pratos Principais') ||
+        (categoria === 'sobremesas' && receita.categoria === 'Sobremesas')
       )
     : receitas;
 
@@ -33,7 +33,6 @@ const Receitas = () => {
     <div className="min-h-screen bg-amber-50 py-8 px-4">
       <div className="max-w-6xl mx-auto">
         
-        {/* Cabeçalho */}
         <header className="text-center mb-12">
           <Link to="/" className="inline-block mb-4">
             <div className="bg-amber-800 text-amber-100 py-2 px-6 rounded-lg border-2 border-amber-700">
@@ -45,18 +44,16 @@ const Receitas = () => {
           </h1>
         </header>
 
-        {/* Seção de Receitas */}
         <section className="bg-white border-2 border-amber-800 rounded-lg shadow-lg p-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {/* Coluna ENTRADAS */}
             <div className="bg-amber-50 border-2 border-amber-700 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-amber-800 mb-4 text-center font-mono">
                 FUNCTION ENTRADAS ()
               </h3>
               <div className="space-y-3">
                 {receitasFiltradas
-                  .filter(receita => receita.categoria === 'starter')
+                  .filter(receita => receita.categoria === 'Entradas')
                   .map((receita) => (
                     <div key={receita.id} className="flex justify-between items-center border-b border-amber-200 pb-2">
                       <Link 
@@ -71,14 +68,13 @@ const Receitas = () => {
               </div>
             </div>
 
-            {/* Coluna PRATOS PRINCIPAIS */}
             <div className="bg-amber-50 border-2 border-amber-700 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-amber-800 mb-4 text-center font-mono">
                 FUNCTION PRATOS ()
               </h3>
               <div className="space-y-3">
                 {receitasFiltradas
-                  .filter(receita => receita.categoria === 'main')
+                  .filter(receita => receita.categoria === 'Pratos Principais')
                   .map((receita) => (
                     <div key={receita.id} className="flex justify-between items-center border-b border-amber-200 pb-2">
                       <Link 
@@ -93,14 +89,13 @@ const Receitas = () => {
               </div>
             </div>
 
-            {/* Coluna SOBREMESAS */}
             <div className="bg-amber-50 border-2 border-amber-700 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-amber-800 mb-4 text-center font-mono">
                 FUNCTION SOBREMESAS ()
               </h3>
               <div className="space-y-3">
                 {receitasFiltradas
-                  .filter(receita => receita.categoria === 'sweet')
+                  .filter(receita => receita.categoria === 'Sobremesas')
                   .map((receita) => (
                     <div key={receita.id} className="flex justify-between items-center border-b border-amber-200 pb-2">
                       <Link 
@@ -116,7 +111,6 @@ const Receitas = () => {
             </div>
           </div>
 
-          {/* Loading State */}
           {receitas.length === 0 && (
             <div className="text-center py-8">
               <div className="font-mono text-amber-700 text-lg">
