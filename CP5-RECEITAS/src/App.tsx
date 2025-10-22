@@ -12,13 +12,21 @@ const App = () => {
       <Cabecalho />
       <Routes>
         <Route path='/' element={<Home />} />
+<<<<<<< Updated upstream
         <Route path='/receita/:id' element={<Receita />} />
         <Route path='/receitas' element={<Receitas />} />
         <Route path='/login' element={<Login />} />
+=======
+        <Route path='/receita/:link' element={<Receita />} />
+>>>>>>> Stashed changes
       </Routes>
       <Footer />
     </BrowserRouter>
   );
 };
 
+<<<<<<< Updated upstream
 export default App;
+=======
+export default App;
+>>>>>>> Stashed changes

@@ -9,6 +9,7 @@ const Home = () => {
   ];
 
   return (
+<<<<<<< Updated upstream
     <div className="min-h-screen bg-amber-50 py-8 px-4">
       <div className="max-w-6xl mx-auto">
         
@@ -110,6 +111,20 @@ const Home = () => {
         </section>
       </div>
     </div>
+=======
+    <>
+    <div className="bg-[#f0ffe9]">
+      <h1>Home Page</h1>
+      <ul>
+        {receitas.map((receita) => (
+          <li key={receita.id}>
+            <Link to={`receita/${receita.id}`}>{receita.nome}</Link>
+          </li>
+        ))}
+      </ul>
+      </div>
+    </>
+>>>>>>> Stashed changes
   );
 };
 
