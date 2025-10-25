@@ -26,7 +26,7 @@ const ListaReceitas: React.FC = () => {
                 className="w-full h-48 object-cover rounded mb-2"
               />
             )}
-            <h3 className="text-xl font-bold">{receita.nome}</h3>
+            <h3 className="text-pink-700 text-xl font-bold">{receita.nome}</h3>
             <p className="text-pink-600">Categoria: {receita.categoria}</p>
             <p className="text-pink-600">Tempo: {receita.tempo}</p>
             
