@@ -66,6 +66,8 @@ npm run dev
 # O site estará disponível em:
 http://localhost:5173
 
+```
+
 # Deploy
 
 O projeto está hospedado na Vercel, e pode ser acessado pelo link abaixo:
