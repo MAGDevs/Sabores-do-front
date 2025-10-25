@@ -30,7 +30,6 @@ interface ReceitaFormProviderProps {
 export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ children }) => {
   const [receitas, setReceitas] = useState<ReceitaFormData[]>([]);
 
-  // 👇 Adicionando defaultValues para evitar erros com ingredientes
   const {
     register,
     handleSubmit,
@@ -40,7 +39,7 @@ export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ childr
     reset
   } = useForm<ReceitaFormData>({
     defaultValues: {
-      ingredientes: [] // importante para que o setValue funcione
+      ingredientes: []
     }
   });
 
@@ -50,7 +49,7 @@ export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ childr
       id: Date.now()
     };
     setReceitas(prev => [...prev, novaReceita]);
-    reset({ ingredientes: [] }); // limpa tudo mas mantém a estrutura
+    reset({ ingredientes: [] }); 
   };
 
   const limparFormulario = () => {

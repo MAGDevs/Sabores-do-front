@@ -33,7 +33,6 @@ const Receitas = () => {
     <div className="min-h-screen bg-white flex flex-col items-center py-12 px-6">
       <div className="w-full max-w-6xl bg-[#ff88a6] border-[#00cc66] rounded-3xl shadow-xl p-10">
         
-        {/* Cabeçalho */}
         <div className="flex flex-col items-center mb-12">
           <Link to="/" className="mb-6">
             <button className="bg-[#ff88a6] hover:bg-[#00cc66] text-amber-50 font-mono px-6 py-2 rounded-lg border-2 border-[#00cc66] transition">
@@ -85,7 +84,6 @@ const Receitas = () => {
           ))}
         </div>
 
-        {/* Loading */}
         {receitas.length === 0 && (
           <div className="text-center py-10">
             <p className="font-mono text-amber-700 text-lg">
