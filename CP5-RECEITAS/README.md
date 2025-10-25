@@ -55,7 +55,9 @@ Receita(utilização de useParams para visualização de receitas individuamente
 git clone 
 
 # Acessar a pasta do projeto
-cd sabores-do-front
+cd sabores-do-front //caso já esteja dentro desta pasta, digite apenas:
+
+cd CP5-RECEITAS
 
 # Instalar as dependências
 npm install
