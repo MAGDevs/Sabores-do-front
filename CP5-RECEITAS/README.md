@@ -1,6 +1,9 @@
 # 🍽️ Sabores do Front
 
-> Um site interativo de receitas desenvolvido com **React**, combinando design moderno, código limpo e uma pitada de criatividade front-end!  
+> Um site interativo de receitas desenvolvido com **React**, combinando design moderno, código limpo e uma pitada de criatividade front-end! 
+
+> Agora é impossível dizer que programadores não sabem cozinhar! 
+
 > O projeto apresenta pratos divididos em entradas, principais e sobremesas, cada um com sua própria página de receita.
 
 ---
