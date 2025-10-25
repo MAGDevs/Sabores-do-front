@@ -41,14 +41,12 @@ const Receita = () => {
             <div className="w-3 h-3 rounded-full bg-[#00cc66]"></div>
           </div>
 
-          {/* Imagem */}
           <img
             src={receita.imagem}
             alt={receita.nome}
             className="w-full h-56 object-cover"
           />
 
-          {/* Corpo rosa estilo "JSON" */}
           <div className="bg-[#ff88a6] text-black px-6 py-6">
             <h2 className="font-bold text-lg mb-4">
               RECEITA: {receita.nome.toUpperCase()}

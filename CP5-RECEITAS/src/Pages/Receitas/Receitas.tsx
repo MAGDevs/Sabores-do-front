@@ -88,10 +88,10 @@ const Receitas = () => {
         {/* Loading */}
         {receitas.length === 0 && (
           <div className="text-center py-10">
-            <p className="font-mono text-pink-700 text-lg">
+            <p className="font-mono text-amber-700 text-lg">
               CARREGANDO RECEITAS...
             </p>
-            <div className="animate-pulse text-pink-500 mt-2 text-2xl">
+            <div className="animate-pulse text-amber-500 mt-2 text-2xl">
               ██████████████
             </div>
           </div>

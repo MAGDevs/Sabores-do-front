@@ -16,11 +16,10 @@ const App = () => {
     <BrowserRouter>
       <Cabecalho />
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/receita/:id' element={<Receita />} />
         <Route path='/receitas' element={<Receitas />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/receita/:link' element={<Receita />} />
-        <Route path='/receita/:link' element={<Receita />} />
         <Route path="/admin" element={
             <div className="container mx-auto py-8">
               <ReceitaForm />
@@ -30,7 +29,6 @@ const App = () => {
         <Route path='/entradas' element={<Entradas />} />
         <Route path='/pratos' element={<PratosPrincipais />} />
         <Route path='/sobremesas' element={<Sobremesas />} />
-
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -38,6 +36,3 @@ const App = () => {
 };
 
 export default App;
-
-
-

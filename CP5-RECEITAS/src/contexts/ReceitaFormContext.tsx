@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useState, type ReactNode } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, type UseFormRegister, type UseFormHandleSubmit, type UseFormWatch, type UseFormSetValue, type FieldErrors } from 'react-hook-form';
 import type { ReceitaFormData } from '../Types/ReceitaTipos';
 
 interface ReceitaFormContextType {
-  register: any;
-  handleSubmit: any;
-  errors: any;
-  watch: any;
-  setValue: any;
+  register: UseFormRegister<ReceitaFormData>;
+  handleSubmit: UseFormHandleSubmit<ReceitaFormData>;
+  errors: FieldErrors<ReceitaFormData>;
+  watch: UseFormWatch<ReceitaFormData>;
+  setValue: UseFormSetValue<ReceitaFormData>;
   receitas: ReceitaFormData[];
   adicionarReceita: (data: ReceitaFormData) => void;
   limparFormulario: () => void;
@@ -29,7 +29,8 @@ interface ReceitaFormProviderProps {
 
 export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ children }) => {
   const [receitas, setReceitas] = useState<ReceitaFormData[]>([]);
-  
+
+  // 👇 Adicionando defaultValues para evitar erros com ingredientes
   const {
     register,
     handleSubmit,
@@ -37,7 +38,11 @@ export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ childr
     watch,
     setValue,
     reset
-  } = useForm<ReceitaFormData>();
+  } = useForm<ReceitaFormData>({
+    defaultValues: {
+      ingredientes: [] // importante para que o setValue funcione
+    }
+  });
 
   const adicionarReceita = (data: ReceitaFormData) => {
     const novaReceita = {
@@ -45,14 +50,14 @@ export const ReceitaFormProvider: React.FC<ReceitaFormProviderProps> = ({ childr
       id: Date.now()
     };
     setReceitas(prev => [...prev, novaReceita]);
-    reset();
+    reset({ ingredientes: [] }); // limpa tudo mas mantém a estrutura
   };
 
   const limparFormulario = () => {
-    reset();
+    reset({ ingredientes: [] });
   };
 
-  const value = {
+  const value: ReceitaFormContextType = {
     register,
     handleSubmit,
     errors,

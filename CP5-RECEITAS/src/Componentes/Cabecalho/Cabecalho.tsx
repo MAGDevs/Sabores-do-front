@@ -1,64 +1,74 @@
 import { Link, useLocation } from "react-router-dom";
 
 const Cabecalho = () => {
-  const { pathname } = useLocation();
+  const location = useLocation();
 
   return (
+    <header className="bg-[#F4FDEB] shadow-md font-mono">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <header className="bg-pink-400 text-white shadow-lg">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold">
-            Sabores do Front
+        <div className="flex items-center gap-2">
+          <img
+            src="/imagens/logotipo-sab-front.png"
+            alt="Logo Sabores do Front"
+            className="w-20 h-20"
+          />
+          <Link
+            to="/"
+            className="text-gray-700 font-mono text-xl font-semibold tracking-tight hover:scale-105 transition-transform"
+          >
+            &lt;SABORES DO FRONT/&gt;
           </Link>
-          
-          <nav className="flex space-x-6">
-            <Link to="/" className="hover:text-pink-700 transition">Home</Link>
-            <Link to="/receitas" className="hover:text-pink-700 transition">Receitas</Link>
-            <Link to="/admin" className="hover:text-pink-700 transition">Admin</Link> 
-            <Link to="/login" className="hover:text-pink-700 transition">Login</Link>
-          </nav>
         </div>
 
-    <header className="bg-[#f0ffe9] flex justify-between items-center px-10 py-6 shadow-md">
-      <div className="flex items-center gap-3">
-        <img src="/logo.png" alt="Logo Sabores do Front" className="w-10 h-10" />
-        <h1 className="text-gray-800 text-xl font-semibold">
-          &lt;SABORES DO FRONT/&gt;
-        </h1>
+        <nav className="flex items-center space-x-6 font-medium">
+          <Link
+            to="/"
+            className={`${
+              location.pathname === "/"
+                ? "bg-pink-400 text-white px-4 py-1 rounded-full font-semibold"
+                : "text-black hover:text-pink-500 transition-colors"
+            }`}
+          >
+            Home
+          </Link>
 
+          <Link
+            to="/receitas"
+            className={`${
+              location.pathname === "/receitas"
+                ? "bg-pink-400 text-white px-4 py-1 rounded-full font-semibold"
+                : "text-black hover:text-pink-500 transition-colors"
+            }`}
+          >
+            Receitas
+          </Link>
+
+          <Link
+            to="/admin"
+            className={`${
+              location.pathname === "/admin"
+                ? "bg-pink-400 text-white px-4 py-1 rounded-full font-semibold"
+                : "text-black hover:text-pink-500 transition-colors"
+            }`}
+          >
+            Admin
+          </Link>
+
+          <Link
+            to="/login"
+            className={`${
+              location.pathname === "/login"
+                ? "bg-pink-400 text-white px-4 py-1 rounded-full font-semibold"
+                : "text-black hover:text-pink-500 transition-colors"
+            }`}
+          >
+            Login
+          </Link>
+        </nav>
       </div>
-
-      <nav className="flex gap-6 font-semibold">
-        <Link
-          to="/"
-          className={`px-4 py-1 rounded-full ${
-            pathname === "/" ? "bg-[#ff7d91] text-white" : "text-gray-800"
-          }`}
-        >
-          Home
-        </Link>
-        <Link
-          to="/receitas"
-          className={`px-4 py-1 rounded-full ${
-            pathname === "/receitas" ? "bg-[#ff7d91] text-white" : "text-gray-800"
-          }`}
-        >
-          Receitas
-        </Link>
-        <Link
-          to="/devs"
-          className={`px-4 py-1 rounded-full ${
-            pathname === "/devs" ? "bg-[#ff7d91] text-white" : "text-gray-800"
-          }`}
-        >
-          Devs
-        </Link>
-      </nav>
     </header>
-  )
-
-  
+  );
 };
 
 export default Cabecalho;
