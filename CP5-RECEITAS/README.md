@@ -77,7 +77,8 @@ http://localhost:5173
 
 O projeto está hospedado na Vercel, e pode ser acessado pelo link abaixo:
 
-🔗 Acessar o site online
+[🔗 Acessar o site online](https://sabores-do-front-qs3e.vercel.app/)
+
 
 # 👩‍💻 Equipe de Desenvolvimento
 ## Integrante	      |  Função
