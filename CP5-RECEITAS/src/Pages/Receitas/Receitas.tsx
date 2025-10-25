@@ -5,7 +5,7 @@ import type { ReceitaTipos } from "../../Types/ReceitaTipos";
 const Receitas = () => {
   const [receitas, setReceitas] = useState<ReceitaTipos[]>([]);
   const [searchParams] = useSearchParams();
-  const categoria = searchParams.get('categoria');
+  const categoria = searchParams.get("categoria");
 
   useEffect(() => {
     const buscarReceita = async () => {
@@ -20,45 +20,60 @@ const Receitas = () => {
     buscarReceita();
   }, []);
 
-
-  const receitasFiltradas = categoria 
-    ? receitas.filter(receita => 
-        (categoria === 'entradas' && receita.categoria === 'Entradas') ||
-        (categoria === 'pratos' && receita.categoria === 'Pratos Principais') ||
-        (categoria === 'sobremesas' && receita.categoria === 'Sobremesas')
+  const receitasFiltradas = categoria
+    ? receitas.filter(
+        (receita) =>
+          (categoria === "entradas" && receita.categoria === "Entradas") ||
+          (categoria === "pratos" && receita.categoria === "Pratos Principais") ||
+          (categoria === "sobremesas" && receita.categoria === "Sobremesas")
       )
     : receitas;
 
   return (
-    <div className="min-h-screen bg-amber-50 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-white flex flex-col items-center py-12 px-6">
+      <div className="w-full max-w-6xl bg-[#ff88a6] border-[#00cc66] rounded-3xl shadow-xl p-10">
         
-        <header className="text-center mb-12">
-          <Link to="/" className="inline-block mb-4">
-            <div className="bg-amber-800 text-amber-100 py-2 px-6 rounded-lg border-2 border-amber-700">
-              <p className="text-lg font-mono">← VOLTAR PARA HOME</p>
-            </div>
+        {/* Cabeçalho */}
+        <div className="flex flex-col items-center mb-12">
+          <Link to="/" className="mb-6">
+            <button className="bg-[#ff88a6] hover:bg-[#00cc66] text-amber-50 font-mono px-6 py-2 rounded-lg border-2 border-[#00cc66] transition">
+              ← VOLTAR PARA HOME
+            </button>
           </Link>
-          <h1 className="text-4xl font-bold text-amber-900 font-serif">
-            {categoria ? `FUNCTION ${categoria.toUpperCase()} ()` : 'FUNCTION RECEITAS ()'}
+          <h1 className="text-4xl font-bold text-black tracking-wide text-center">
+            {categoria
+              ? `FUNCTION ${categoria.toUpperCase()} ()`
+              : "FUNCTION RECEITAS ()"}
           </h1>
-        </header>
+          <p className="mt-2 text-white font-mono text-sm text-center">
+            Escolha uma das opções abaixo para visualizar a receita completa 🍴
+          </p>
+        </div>
 
-        <section className="bg-white border-2 border-amber-800 rounded-lg shadow-lg p-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div className="bg-amber-50 border-2 border-amber-700 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-amber-800 mb-4 text-center font-mono">
-                FUNCTION ENTRADAS ()
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            { titulo: "FUNCTION ENTRADAS ()", tipo: "Entradas" },
+            { titulo: "FUNCTION PRATOS ()", tipo: "Pratos Principais" },
+            { titulo: "FUNCTION SOBREMESAS ()", tipo: "Sobremesas" },
+          ].map((secao) => (
+            <div
+              key={secao.titulo}
+              className="bg-amber-50 border-2 border-[#00cc66] rounded-xl p-6 hover:shadow-lg transition-shadow"
+            >
+              <h3 className="text-xl font-bold text-black mb-4 text-center font-mono">
+                {secao.titulo}
               </h3>
               <div className="space-y-3">
                 {receitasFiltradas
-                  .filter(receita => receita.categoria === 'Entradas')
+                  .filter((r) => r.categoria === secao.tipo)
                   .map((receita) => (
-                    <div key={receita.id} className="flex justify-between items-center border-b border-amber-200 pb-2">
-                      <Link 
+                    <div
+                      key={receita.id}
+                      className="flex justify-between items-center border-b border-[#00cc66] pb-2"
+                    >
+                      <Link
                         to={`/receita/${receita.id}`}
-                        className="text-amber-700 hover:text-amber-900 hover:underline font-medium"
+                        className="text-black hover:text-[#00cc66] hover:underline font-medium transition-colors"
                       >
                         {receita.id}. {receita.nome}
                       </Link>
@@ -67,61 +82,20 @@ const Receitas = () => {
                   ))}
               </div>
             </div>
+          ))}
+        </div>
 
-            <div className="bg-amber-50 border-2 border-amber-700 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-amber-800 mb-4 text-center font-mono">
-                FUNCTION PRATOS ()
-              </h3>
-              <div className="space-y-3">
-                {receitasFiltradas
-                  .filter(receita => receita.categoria === 'Pratos Principais')
-                  .map((receita) => (
-                    <div key={receita.id} className="flex justify-between items-center border-b border-amber-200 pb-2">
-                      <Link 
-                        to={`/receita/${receita.id}`}
-                        className="text-amber-700 hover:text-amber-900 hover:underline font-medium"
-                      >
-                        {receita.id}. {receita.nome}
-                      </Link>
-                      <span className="font-bold text-amber-900 text-sm">→</span>
-                    </div>
-                  ))}
-              </div>
-            </div>
-
-            <div className="bg-amber-50 border-2 border-amber-700 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-amber-800 mb-4 text-center font-mono">
-                FUNCTION SOBREMESAS ()
-              </h3>
-              <div className="space-y-3">
-                {receitasFiltradas
-                  .filter(receita => receita.categoria === 'Sobremesas')
-                  .map((receita) => (
-                    <div key={receita.id} className="flex justify-between items-center border-b border-amber-200 pb-2">
-                      <Link 
-                        to={`/receita/${receita.id}`}
-                        className="text-amber-700 hover:text-amber-900 hover:underline font-medium"
-                      >
-                        {receita.id}. {receita.nome}
-                      </Link>
-                      <span className="font-bold text-amber-900 text-sm">→</span>
-                    </div>
-                  ))}
-              </div>
+        {/* Loading */}
+        {receitas.length === 0 && (
+          <div className="text-center py-10">
+            <p className="font-mono text-pink-700 text-lg">
+              CARREGANDO RECEITAS...
+            </p>
+            <div className="animate-pulse text-pink-500 mt-2 text-2xl">
+              ██████████████
             </div>
           </div>
-
-          {receitas.length === 0 && (
-            <div className="text-center py-8">
-              <div className="font-mono text-amber-700 text-lg">
-                CARREGANDO RECEITAS...
-              </div>
-              <div className="animate-pulse text-amber-500 mt-2">
-                ██████████████
-              </div>
-            </div>
-          )}
-        </section>
+        )}
       </div>
     </div>
   );

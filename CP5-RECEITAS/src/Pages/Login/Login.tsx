@@ -8,10 +8,10 @@ export default function Login() {
   const [senha, setSenha] = useState("");
 
   const handleLogin = () => {
-    // Usuário e senha "fixos" para teste
+
     if (cpf === "11122233355" && senha === "teste") {
       localStorage.setItem("logado", "true"); 
-      navigate("/Home"); 
+      navigate("/"); 
     } else {
       alert("Email ou senha incorretos!");
     }
@@ -49,15 +49,6 @@ export default function Login() {
               </Link>
             </button>
           </form>
-          <p className="text-sm mt-4 text-center">
-            Não tem conta?{" "}
-            <span
-              onClick={() => navigate("/cadastro")}
-              className="text-pink-600 cursor-pointer hover:underline"
-            >
-              Cadastre-se
-            </span>
-          </p>
         </div>
       </div>
     </>
